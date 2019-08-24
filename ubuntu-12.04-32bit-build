@@ -1,2 +1,7 @@
 
+# docker run
 docker run -it -v /sitara:/sitara -v /home/:/home yuben75/ubuntu-12.04-32bit-build
+
+# build cross program for am335x
+cd /home/dikey/am335x_sdk-UB12/root/Desktop/80618_project/prj_80618_Library/Driver
+./qmake.sh -r app
