@@ -5,3 +5,9 @@ docker run -it -v /sitara:/sitara -v /home/:/home yuben75/ubuntu-12.04-32bit-bui
 # build cross program for am335x
 cd /home/dikey/am335x_sdk-UB12/root/Desktop/80618_project/prj_80618_Library/Driver
 ./qmake.sh -r app
+
+
+# 建立 volume 並掛載
+docker volume create --name db-data
+docker volume ls
+docker run -it -v db-data:/db/data -v /sitara:/sitara -v /home/:/home yuben75/ubuntu-12.04-32bit-build
